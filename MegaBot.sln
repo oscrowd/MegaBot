@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaBot", "MegaBot\MegaBot.csproj", "{B63DBA12-44A0-47B5-B40A-D07E391F4F2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B63DBA12-44A0-47B5-B40A-D07E391F4F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63DBA12-44A0-47B5-B40A-D07E391F4F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63DBA12-44A0-47B5-B40A-D07E391F4F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63DBA12-44A0-47B5-B40A-D07E391F4F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {459C56C0-2A11-4597-91C8-5CDE21A9FFD1}
+	EndGlobalSection
+EndGlobal
