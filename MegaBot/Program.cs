@@ -6,6 +6,9 @@ using Microsoft.Extensions.Hosting;
 //using MyBot;
 using Telegram.Bot;
 using MegaBot.Controllers;
+using MegaBot.Services;
+using MegaBot.Configuration;
+
 
 namespace MegaBot
 {
@@ -28,12 +31,22 @@ namespace MegaBot
         static void ConfigureServices(IServiceCollection services)
         {
             // Подключаем контроллеры сообщений и кнопок
+            AppSettings appSettings = BuildAppSettings();
+            services.AddSingleton(BuildAppSettings());
             services.AddTransient<DefaultMessageController>();
             services.AddTransient<VoiceMessageController>();
             services.AddTransient<TextMessageController>();
             services.AddTransient<InlineKeyboardController>();
-            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient("6101708551:AAFCaBom8KE-zcK4NCOLV-0JpatTUXwipbU"));
+            services.AddSingleton<ITelegramBotClient>(provider => new TelegramBotClient(appSettings.BotToken));
             services.AddHostedService<Bot>();
+            services.AddSingleton<IStorage, MemoryStorage>();
+        }
+        static AppSettings BuildAppSettings()
+        {
+            return new AppSettings()
+            {
+                BotToken = "6101708551:AAFCaBom8KE-zcK4NCOLV-0JpatTUXwipbU"
+            };
         }
     }
 }
