@@ -22,7 +22,7 @@ namespace MegaBot.Services
                 return _sessions[chatId];
 
             // Создаем и возвращаем новую, если такой не было
-            var newSession = new Session() { LanguageCode = "ru" };
+            var newSession = new Session() { LanguageCode = "" };
             _sessions.TryAdd(chatId, newSession);
             return newSession;
         }

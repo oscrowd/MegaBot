@@ -27,15 +27,15 @@ namespace MegaBot.Controllers
             // Генерим информационное сообщение
             string languageText = callbackQuery.Data switch
             {
-                "ru" => " Русский",
-                "en" => " Английский",
+                "le" => " Возврат длины строки",
+                "su" => " Суммирование чисел",
                 _ => String.Empty
             };
 
             // Отправляем в ответ уведомление о выборе
             await _telegramClient.SendTextMessageAsync(callbackQuery.From.Id,
-                $"<b>Язык аудио - {languageText}.{Environment.NewLine}</b>" +
-                $"{Environment.NewLine}Можно поменять в главном меню.", cancellationToken: ct);
+                $"<b>Выбран режим - {languageText}.{Environment.NewLine}</b>" +
+                $"{Environment.NewLine}Режим можно поменять в главном меню.", cancellationToken: ct);
         }
     }
 }
